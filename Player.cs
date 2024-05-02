@@ -42,7 +42,7 @@ public partial class Player : Actor
 
 	[ExportSubgroup("Jumping")]
 	[Export]
-	int maxJumps = 2;
+	public int maxJumps = 2;
 	int jumps = 2;
 	[Export]
 	public float jumpHeight = 50f;
@@ -71,7 +71,7 @@ public partial class Player : Actor
 
 		coyoteTime = Mathf.Max(0f, coyoteTime - (float)delta);
 		jumpBuffer = Mathf.Max(0f, jumpBuffer - (float)delta);
-		
+
 		if (Input.IsActionJustPressed("Jump")) jumpBuffer = maximumJumpBuffer;
 
     }
